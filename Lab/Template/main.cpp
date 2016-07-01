@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
+ * Author: Raul Gonzalez
  * Created on June 27, 2016, 9:03 PM
  * Purpose:  Template
  */
