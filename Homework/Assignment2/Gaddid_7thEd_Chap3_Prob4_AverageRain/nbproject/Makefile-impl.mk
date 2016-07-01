@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Template
+PROJECTNAME=Gaddid_7thEd_Chap3_Prob4_AverageRain
 
 # Active Configuration
 DEFAULTCONF=Debug
