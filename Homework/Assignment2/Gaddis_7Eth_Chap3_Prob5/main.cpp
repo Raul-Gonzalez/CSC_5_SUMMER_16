@@ -20,7 +20,7 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-    string movNam;
+    string movNam;//Name of the movie to be outputted
     float adtTik, chiTik, grosInc, netInc, amtDis; 
     
     //Process the Data
@@ -33,9 +33,9 @@ int main(int argc, char** argv) {
     cout<<"Enter the amount of child tickets sold: "<<endl;
     cin>>chiTik;
     
-    grosInc = adtTik*6.00f + chiTik*3.00f;
-    netInc = grosInc*.20f;
-    amtDis = grosInc - netInc;
+    grosInc = adtTik*6.00f + chiTik*3.00f;//Calculation of adult and child tickets
+    netInc = grosInc*.20f;//Calculation of the net income
+    amtDis = grosInc - netInc;//Amount of money paid to the distributer
     
     
     //Output the processed Data

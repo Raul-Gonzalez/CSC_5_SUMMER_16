@@ -1,6 +1,6 @@
-/*
-* File:   main.cpp
- * Author: Raul Gonzalez
+/* 
+ * File:   main.cpp
+ * Author: Dr. Mark E. Lehr
  * Created on June 27, 2016, 9:03 PM
  * Purpose:  Template
  */
@@ -18,7 +18,9 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
- 
+    
+    //Input Data
+    
     //Process the Data
     
     //Output the processed Data
