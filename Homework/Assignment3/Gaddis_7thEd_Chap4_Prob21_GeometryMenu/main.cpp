@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Raul Gonzalez
  * Created on June 27, 2016, 9:03 PM
- * Purpose:  Template
+ * Purpose:  Geometry Calculator
  */
 
 //System Libraries
