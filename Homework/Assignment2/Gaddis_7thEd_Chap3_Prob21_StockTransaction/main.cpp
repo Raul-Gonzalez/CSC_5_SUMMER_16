@@ -20,7 +20,7 @@ using namespace std; //Namespace of the System Libraries
 int main(int argc, char** argv) {
     //Declare Variables
     float stckPrc1, stckPrc2, brkrPer, profit;
-    float shrsEx,amtCom1,amtCom2,stckSld;
+    float stckBgt,shrsEx,amtCom1,amtCom2,stckSld;
     
     //Input Data
     shrsEx=1000;    //Number of shares purchased by Joe
@@ -34,11 +34,12 @@ int main(int argc, char** argv) {
     amtCom2=brkrPer*shrsEx*stckPrc2*1.0f;
     profit=((shrsEx*stckPrc2)-amtCom2)-((shrsEx*stckPrc1)-amtCom1);
     stckSld=stckPrc2*shrsEx;
+    stckBgt=stckPrc1*shrsEx;
     
     //Output the processed Data
     cout<<"Stock Transaction Report"<<endl;
     cout<<setprecision(2)<<fixed;
-    cout<<"Price paid for stocks                        $    "<<stckPrc1<<endl;
+    cout<<"Price paid for stocks                        $ "<<stckBgt<<endl;
     cout<<"Amount paid to broker when purchasing stocks $   "<<amtCom1<<endl;
     cout<<"Price stocks were sold for                   $ "<<stckSld<<endl;
     cout<<"Amount paid to broker when selling stocks    $   "<<amtCom2<<endl;
