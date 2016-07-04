@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Raul Gonzalez
- * Created on June 27, 2016, 9:03 PM
+ * Created on July 1, 2016, 7:52 PM
  * Purpose:  Assessment Tax
  */
 
