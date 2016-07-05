@@ -2,7 +2,7 @@
 * File:   main.cpp
  * Author: Raul Gonzalez
  * Created on June 30, 2016, 1:45 PM
- * Purpose:  Convert Number to Roman numerals
+ * Purpose:  Black Jack Calculator
  */
 
 //System Libraries
