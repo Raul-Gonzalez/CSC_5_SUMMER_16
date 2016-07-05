@@ -19,7 +19,7 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-    float totSold=0,totCost=0, perDis, untSold;
+    float totCost=0, perDis, untSold;
     
     //Input Data
     cout<<"Enter the number of units sold"<<endl;
