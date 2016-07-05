@@ -6,7 +6,7 @@
  * Numbers Test
  */
 //System Libraries
-#include <iostream>//Input /Output Stream Library
+#include <iostream>//Input Output Stream Library
 #include <iomanip>//
 using namespace std;// Iostream uses the standard namespace
 

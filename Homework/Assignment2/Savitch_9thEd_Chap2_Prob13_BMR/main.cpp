@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Raul Gonzalez
  * Created on June 27, 2016, 9:03 PM
- * Purpose:  Average of 5 test scores
+ * Purpose:  Template
  */
 
 //System Libraries
@@ -18,18 +18,12 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-    float scor1,scor2,scor3,scor4,scor5,avgscor;
     
     //Input Data
-    cout<<"Enter the scores for each test [1-5] separated by a space"<<endl;
-    cin>>scor1>>scor2>>scor3>>scor4>>scor5;
-    
     
     //Process the Data
-    avgscor=(scor1+scor2+scor3+scor4+scor5)/5;
     
     //Output the processed Data
-    cout<<"The average test score is "<<avgscor<<endl;
     
     //Exit Stage Right!
     return 0;
