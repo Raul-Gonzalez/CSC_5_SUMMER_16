@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Raul Gonzalez
  * Created on June 27, 2016, 9:03 PM
- * Purpose:  Template
+ * Purpose:  Enter mass in kg and convert to nwnts then check weight
  */
 
 //System Libraries
@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     float massKg, massNewt, gravity=9.8;
     
     //Input Data
-    cout<<"Enter the objects mass"<<endl;
+    cout<<"Enter the objects mass in kg"<<endl;
     cin>>massKg;
     
     //Process the Data
