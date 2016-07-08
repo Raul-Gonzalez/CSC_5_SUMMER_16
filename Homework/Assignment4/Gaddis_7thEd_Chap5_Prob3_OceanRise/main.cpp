@@ -1,12 +1,13 @@
 /* 
  * File:   main.cpp
  * Author: Raul Gonzalez
- * Created on July 6, 2016, 4:07 PM
+ * Created on July 7, 2016, 10:48 PM
  * Purpose:  
  */
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <iomanip>   //Manipulate 
 using namespace std; //Namespace of the System Libraries
 
 //User Libraries
@@ -18,10 +19,17 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
+    float ocnRise,//The level at which the ocean is rising
+            time;//The years
     
-    //Input Data
-    
-    //Process the Data
+    //Process the Data and output simultaneously
+    cout<<"Ocean level rise in mm per year"<<endl;
+    cout<<"Years      mm"<<endl;
+    for(int year=1;year<=25;year++){
+        ocnRise=1.5*year;
+        cout<<fixed<<setprecision(2)<<showpoint;
+        cout<<setw(3)<<year<<"\t"<<setw(5)<<ocnRise<<endl;
+    }
     
     //Output the processed Data
     
