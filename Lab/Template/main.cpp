@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Raul Gonzalez
- * Created on July 6, 2016, 12:27 PM
+ * Created on July 8, 2016, 12:27 PM
  * Purpose:  Template
  */
 
@@ -19,11 +19,15 @@ using namespace std; //Namespace of the System Libraries
 int main(int argc, char** argv) {
     //Declare Variables
     
+   
     //Input Data
     
+
     //Process the Data
     
-    //Output the processed Data
+    
+    //Output the data
+    
     
     //Exit Stage Right!
     return 0;

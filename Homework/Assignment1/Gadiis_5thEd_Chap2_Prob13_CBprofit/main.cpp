@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     //Process the data
     //sellPrce=cost*(1+profit);
     selPrce=cost*(1+profit);
-    int pennies=selPrce*100+0.5;//Shift into pennies add half to 
+    int pennies=selPrce*100+0.5;//Shift into pennies add half to round up
     selPrce=pennies/100.0f;
     
     //Output the processed data
