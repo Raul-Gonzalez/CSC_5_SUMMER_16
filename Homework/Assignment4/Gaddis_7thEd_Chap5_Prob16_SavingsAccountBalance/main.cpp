@@ -66,8 +66,8 @@ int main(int argc, char** argv) {
         month++;
 
     }while(month<=mnthsPas);
-    finBal=intEarn+startBal+totDep-totWit;
-    int pennies=finBal*100+0.5;
+    finBal=totIrate+startBal+totDep-totWit;
+    int pennies=finBal*100+0.5;//Round to the nearest penny
     finBal=pennies/100.0f;
     cout<<fixed<<setprecision(2)<<showpoint;
     cout<<"Final balance in the account is $ "<<setw(6)<<finBal<<endl;
