@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Raul Gonzalez
  * Created on July 8, 2016, 12:27 PM
- * Purpose:  Template
+ * Purpose:  Ascii codes
  */
 
 //System Libraries
@@ -20,7 +20,7 @@ using namespace std; //Namespace of the System Libraries
 int main(int argc, char** argv) {
     //Loop created for Ascii code
     for(unsigned char i=0;i<=127;i++){
-        cout<<"Ascii Code ->"<<static_cast<int>(i)<<"= Character ->"<<i<<endl;
+        cout<<"Ascii Code = "<<static_cast<int>(i)<<" = Character = "<<i<<endl;
     }
     for(unsigned char i=0;i<=127;i++){
         cout<<i;

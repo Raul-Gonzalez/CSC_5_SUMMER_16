@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Created on June 27, 2016, 9:03 PM
- * Purpose:  Template
+ * Author: Raul Gonzalez
+ * Created on July 11,, 2016, 3:50 PM
+ * Purpose:  Calories Burned on the Treadmill
  */
 
 //System Libraries
@@ -19,10 +19,10 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-   float start_min = 0.0, //Starting time
-         end_min = 30.0,  //Ending time
-         increment = 5; //Increment time
-   float conversion_factor = 3.9;
+   float startMin = 0.0, //Starting time
+         endMin = 30.0,  //Ending time
+         incrmnt = 5;    //Increment time
+   float cnvfact = 3.9;  //Used to convert Calories Burned
     
     
     
@@ -39,10 +39,10 @@ int main(int argc, char** argv) {
    cout<<"_____________\n";
     
    //Display the speeds.
-   for(min = start_min; min <= end_min; min += increment)
+   for(min = startMin; min <= endMin; min += incrmnt)
    {
       //Calculate cal
-       cal = min * conversion_factor;
+       cal=min*cnvfact;
        
       //Display the calories in minutes.
        cout<<setw(4)<< min<<"\t"<<setw(5)<<cal<<endl;
