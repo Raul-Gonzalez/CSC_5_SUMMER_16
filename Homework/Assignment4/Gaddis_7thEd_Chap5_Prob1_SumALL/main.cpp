@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
         }
         cout<<endl<<"Would you like to run this again type Y for yes"<<endl;
         cin>>answer;
-    }while(answer=='Y');
+    }while(answer=='Y'||answer=='y');
     //Exit Stage Right!
     return 0;
 }
