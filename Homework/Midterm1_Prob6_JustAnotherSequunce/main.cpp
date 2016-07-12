@@ -18,10 +18,10 @@ using namespace std; //Namespace of the System Libraries
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-    float 
+    float var;
    
     //Input Data
-    
+    cout<<"Sequence "
 
     //Process the Data
     
