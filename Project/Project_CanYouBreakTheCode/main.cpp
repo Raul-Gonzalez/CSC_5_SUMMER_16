@@ -27,16 +27,22 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int>(time(0)));
     
     //Declare Variables
-    int num1=0,num2=0,num3=0, nLoss=0,nWins=0;
-    int count=0,tries=5;
-    string word,guess1,guess2,guess3;
+    int num1=0,num2=0,num3=0,//Random numbers used to call each word
+        nLoss=0,nWins=0;//Counters used for number of wins|losses
+    int count=0;
+    const int SIZE=20;
+    string word,guess1,guess2,guess3,//Strings Declared for each guess
+            fName;//String used for the file
     ifstream inFile1,inFile2,inFile3;//Files where words will be obtained from
-    char play;
+    char lName[SIZE],
+            play;//Prompts user for input to initialize the game
+    ofstream out;//Used to send Data to a file
     
     //Open files and Input Data
     inFile1.open("word1.txt");
     inFile2.open("word2.txt");
     inFile3.open("word3.txt");
+    out.open("stats.dat");
     
     cout<<"A WORM has infected the servers in the Nebuchandnezzar.";
     cout<<" It is up to you to save the day."<<endl;
@@ -47,6 +53,11 @@ int main(int argc, char** argv) {
     cout<<"Are you the One?"<<endl;
     cout<<"Enter Y to play"<<endl;
     cin>>play;
+    cout<<"What is your first Name"<<endl;
+    cin>>fName;
+    cout<<"What is your last Name"<<endl;
+    cin>>lName;
+    cout<<endl;
 
     //Input the Data for the first test
     while (count<1){
@@ -61,7 +72,7 @@ int main(int argc, char** argv) {
     //Loop used for the first guess
     while(guess1!=word){
         cout<<"Guess a three character word"<<endl;
-        cin>>guess1;
+        cin>>setw(3)>>guess1;
         if(guess1!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -87,7 +98,7 @@ int main(int argc, char** argv) {
     //Loop used for the second guess
         while(guess2!=word){
         cout<<"Guess a four character word"<<endl;
-        cin>>guess2;
+        cin>>setw(4)>>guess2;
         if(guess2!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -96,8 +107,8 @@ int main(int argc, char** argv) {
           nLoss++;  
         }
         if(guess2==word)nWins++;
-        cout<<"You have passed the second test."<<endl;
     }
+    cout<<"You have passed the second test."<<endl;
     cout<<"Number of losses "<<nLoss<<endl;
     cout<<"Number of wins "<<nWins<<endl;
     
@@ -114,7 +125,7 @@ int main(int argc, char** argv) {
     //Loop for the third guess
     while(guess3!=word){
         cout<<"Guess a five character word"<<endl;
-        cin>>guess3;
+        cin>>setw(5)>>guess3;
         if(guess3!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -124,21 +135,24 @@ int main(int argc, char** argv) {
         if(guess3==word)nWins++;
     }
     cout<<"You have passed the third test."<<endl;
+    
+    //Output the processed Data to the screen
+    cout<<"The Nebuchandnezzar has been saved"<<endl;
     cout<<"Total wins are "<<nWins<<endl;
     cout<<"Total losses are "<<nLoss<<endl;
+    if(nWins>=nLoss){
+        cout<<"You are doign better than most"<<endl;
+    }
  
-    //Output the value
-  
+    //Output the processed Data to a file
+    out<<endl;<<fName<<" "<<lName<<" Game Stats "<<endl;
+    out<<" Number of Wins   = "<<nWins<<endl;
+    out<<" Number of Losses = "<<nLoss<<endl;
+    if(nWins>=nLoss){
+        out<<"You are doing better than most"<<endl;
+    }
     
-    //Input Data for the second card
-   
-    //Evaluate the second card
-   
-    //Output the value
-   /*else
-   cout<<"You are exiting the game"<<endl;*/
-
-   
     //Exit Stage Right!
+    out.close();
     return 0;
 }
