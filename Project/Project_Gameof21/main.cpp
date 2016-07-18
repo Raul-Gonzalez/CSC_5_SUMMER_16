@@ -7,7 +7,12 @@
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <ctime>     //Time for random seed
+#include <cstdlib>   //Random number seed
+#include <iomanip>   //Formatting
 #include <cmath>     //Math Library
+#include <fstream>   //File I/O
+#include <string>    //String Object
 using namespace std; //Namespace of the System Libraries
 
 //User Libraries
@@ -15,64 +20,80 @@ using namespace std; //Namespace of the System Libraries
 //Global Constants
 
 //Function Prototypes
-char GetChar(int iGenerator, char cBase, int iRange) {
-	return (cBase + iGenerator%iRange);
-}
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
+    //Set the random number seed
+    srand(static_cast<unsigned int>(time(0)));
+    
     //Declare Variables
-    char play,caRow[80];
-    int value=0,excess=0;
-    int j=7,k=2,l=5,m=1;
+    int number, nLoss=0,nWins=0;
+    int count=0,tries=5;
+    string word,guess1,guess2,guess3;
+    ifstream inFile1,inFile2,inFile3;//Files where words will be obtained from
+    char play;
     
-    //Input Data
-    cout<<"A WORM has infected the servers at COPKAM INC.";
+    //Open files and Input Data
+    inFile1.open("word1.txt");
+    inFile2.open("word2.txt");
+    inFile3.open("word3.txt");
+    
+    cout<<"A WORM has infected the servers in the Nebuchandnezzar.";
     cout<<" It is up to you to save the day."<<endl;
+    cout<<"You must guess a series of the most commonly used words in";
+    cout<<" the English language."<<endl;
     
-    
-    //Evaluate the first card
-    do{
     //Input the Data
-        cout<<"Are you the One?"<<endl;
-        cout<<"Enter Y to play"<<endl;
-        cin>>play;
-        cout<<"You are entering the matrix"<<endl;
-        while(true){
-            int i=0;
-            //Output a random row of characters
-            while(i<80){
-                if(caRow[i]!=' '){
-                    caRow[i]= GetChar(j + i*i, 33, 30);
-                }
-                std::cout<<caRow[i];
-                ++i;
-            }
-            j=(j+31);
-            k=(k+17);
-            l=(l+47);
-            m=(m+67);
-            caRow[j%80]='-';
-            caRow[k%80]=' ';
-            caRow[l%80]='-';
-            caRow[m%80]=' ';
-            //Delay
-            i=0;
-            while(i<30){
-                GetChar(1,1,1);
-                ++i;
-            }
-        }
-    
-    //Process The Data
+    cout<<"Are you the One?"<<endl;
+    cout<<"Enter Y to play"<<endl;
+    cin>>play;
+
+    while (count<1){
+        number = rand()%10+1;
+        count++;
+        cout<<endl;
+        cout<<number<<endl;
+    }
+    for (count =0;count<number; ++count)
+    {
+        getline(inFile1, word);//Get the word
+    }
+        cout<<"Guess a three character word"<<endl;
+        cin>>guess1;
+    while(guess1!=word){
+        nLoss++;
+        cout<<"You have not entered the correct word"<<endl;
+        cout<<"Try to guess the three character word again"<<endl;
+        cin>>guess1;
+        if(guess1==word)nWins++;
+        cout<<"You have passed the first test."<<endl;
+        cout<<endl;
+    }
+    cout<<"You have passed the first test."<<endl;
         
-   
- 
-    //Output the value
-   
-    
-    //Input Data for the second card
-    
+    //Input Data for the Second Test
+    while (count<1){
+        number = rand()%10+1;
+        count++;
+        cout<<endl;
+        cout<<number<<endl;
+    }
+    for (count =0;count<number; ++count)
+    {
+        getline(inFile2, word);//Get the word
+    }
+        cout<<"Guess a four character word"<<endl;
+        cin>>guess2;
+    while(guess2!=word){
+        nLoss++;
+        cout<<"You have not entered the correct word"<<endl;
+        cout<<"Try to guess the four character word again"<<endl;
+        cin>>guess2;
+        if(guess2==word)nWins++;
+        cout<<"You have passed the second test."<<endl;
+        cout<<nLoss<<endl;
+        cout<<nWins<<endl;
+    }
     //Evaluate the second card
     
  
@@ -84,8 +105,10 @@ int main(int argc, char** argv) {
     //Evaluate the second card
    
     //Output the value
-   }while(play!='Y');
-   cout<<"You are exiting the game"<<endl;
+   /*else
+   cout<<"You are exiting the game"<<endl;*/
+
+   
     //Exit Stage Right!
     return 0;
 }

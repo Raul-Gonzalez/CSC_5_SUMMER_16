@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
  * Created on July 7th, 2016, 1:00 PM
- * Purpose:  Version 1 Craps
+ * Purpose:  Version 3 Craps
  */
 
 //System Libraries
@@ -28,13 +28,22 @@ int main(int argc, char** argv) {
     
     //Declare Variables
     int nGames,nWins=0,nLose=0;
+    string fName;
+    const int SIZE=20;
+    char lName[SIZE];
+    ofstream out;
     
-    //Input Data
+    //Open files and Input Data
+    out.open("stats.dat");
     do{
         cout<<"The Game of Craps"<<endl;
         cout<<"How many games to Play has to be positive"<<endl;
         cin>>nGames;
     }while(nGames<=0);
+    cout<<"What is your first Name"<<endl;
+    cin>>fName;
+    cout<<"What is your last Name"<<endl;
+    cin>>lName;
     //Process the Data
     for(int game=1;game<=nGames;game++){
         //Throw a pair of dice
@@ -68,7 +77,8 @@ int main(int argc, char** argv) {
         }
     }
     
-    //Output the processed Data
+    //Output the processed Data to the Screen
+    cout<<endl<<fName<<" "<<lName<<" Game Stats"<<endl;
     cout<<"Number of Games = "<<nGames<<endl;
     cout<<"Number of Wins  = "<<nWins<<endl;
     cout<<"Number of Losses= "<<nLose<<endl;
@@ -76,6 +86,18 @@ int main(int argc, char** argv) {
         cout<<"You are doing better than statistics ";
         cout<<"determines is possible!!!"<<endl;
     }
+    
+    //Output the processed Data to a file
+    out<<endl<<fName<<" "<<lName<<" Game Stats"<<endl;
+    out<<"Number of Games = "<<nGames<<endl;
+    out<<"Number of Wins  = "<<nWins<<endl;
+    out<<"Number of Losses= "<<nLose<<endl;
+    if(nWins>=nLose){
+        out<<"You are doing better than statistics ";
+        out<<"determines is possible!!!"<<endl;
+    }
+    
     //Exit Stage Right!
+    out.close();
     return 0;
 }

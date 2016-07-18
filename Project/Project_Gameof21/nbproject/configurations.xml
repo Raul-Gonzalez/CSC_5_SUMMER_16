@@ -25,6 +25,9 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>word1.txt</itemPath>
+    <itemPath>word2.txt</itemPath>
+    <itemPath>word3.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -37,6 +40,12 @@
       <compileType>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="word1.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="word2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="word3.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -60,6 +69,12 @@
         </asmTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="word1.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="word2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="word3.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
