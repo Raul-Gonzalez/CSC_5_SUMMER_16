@@ -23,11 +23,11 @@ using namespace std; //Namespace of the System Libraries
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
-    //Set the random number seed
+//Set the random number seed
     srand(static_cast<unsigned int>(time(0)));
     
     //Declare Variables
-    int number, nLoss=0,nWins=0;
+    int num1=0,num2=0,num3=0, nLoss=0,nWins=0;
     int count=0,tries=5;
     string word,guess1,guess2,guess3;
     ifstream inFile1,inFile2,inFile3;//Files where words will be obtained from
@@ -48,54 +48,84 @@ int main(int argc, char** argv) {
     cout<<"Enter Y to play"<<endl;
     cin>>play;
 
+    //Input the Data for the first test
     while (count<1){
-        number = rand()%10+1;
+        num1 = rand()%10+1;
         count++;
-        cout<<endl;
-        cout<<number<<endl;
+        cout<<num1<<endl;
     }
-    for (count =0;count<number; ++count)
+    for (count =0;count<num1; ++count)
     {
         getline(inFile1, word);//Get the word
     }
+    //Loop used for the first guess
+    while(guess1!=word){
         cout<<"Guess a three character word"<<endl;
         cin>>guess1;
-    while(guess1!=word){
-        nLoss++;
+        if(guess1!=word){
         cout<<"You have not entered the correct word"<<endl;
-        cout<<"Try to guess the three character word again"<<endl;
-        cin>>guess1;
-        if(guess1==word)nWins++;
-        cout<<"You have passed the first test."<<endl;
         cout<<endl;
+        cout<<"Try to guess the three character word again"<<endl;
+          nLoss++;  
+        }
+        if(guess1==word)nWins++;
     }
     cout<<"You have passed the first test."<<endl;
+    cout<<"Number of losses "<<nLoss<<endl;
+    cout<<"Number of wins "<<nWins<<endl;
         
     //Input Data for the Second Test
     while (count<1){
-        number = rand()%10+1;
+        num2 = rand()%10+1;
         count++;
-        cout<<endl;
-        cout<<number<<endl;
+        cout<<num2<<endl;
     }
-    for (count =0;count<number; ++count)
+    for (count=0;count<num2;++count)
     {
         getline(inFile2, word);//Get the word
     }
+    //Loop used for the second guess
+        while(guess2!=word){
         cout<<"Guess a four character word"<<endl;
         cin>>guess2;
-    while(guess2!=word){
-        nLoss++;
+        if(guess2!=word){
         cout<<"You have not entered the correct word"<<endl;
+        cout<<endl;
         cout<<"Try to guess the four character word again"<<endl;
-        cin>>guess2;
+        cout<<endl;
+          nLoss++;  
+        }
         if(guess2==word)nWins++;
         cout<<"You have passed the second test."<<endl;
-        cout<<nLoss<<endl;
-        cout<<nWins<<endl;
     }
-    //Evaluate the second card
+    cout<<"Number of losses "<<nLoss<<endl;
+    cout<<"Number of wins "<<nWins<<endl;
     
+    //Input the data for the third test
+    while (count<1){
+        num3 = rand()%10+1;
+        count++;
+        cout<<num3<<endl;
+    }
+    for (count =0;count<num3; ++count)
+    {
+        getline(inFile3, word);//Get the word
+    }
+    //Loop for the third guess
+    while(guess3!=word){
+        cout<<"Guess a five character word"<<endl;
+        cin>>guess3;
+        if(guess3!=word){
+        cout<<"You have not entered the correct word"<<endl;
+        cout<<endl;
+        cout<<"Try to guess the five character word again"<<endl;
+          nLoss++;  
+        }
+        if(guess3==word)nWins++;
+    }
+    cout<<"You have passed the third test."<<endl;
+    cout<<"Total wins are "<<nWins<<endl;
+    cout<<"Total losses are "<<nLoss<<endl;
  
     //Output the value
   
