@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=project_gameof21
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/project_gameof21
+CND_ARTIFACT_NAME_Debug=project_canyoubreakthecode
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/project_canyoubreakthecode
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=projectgameof21.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/projectgameof21.tar
+CND_PACKAGE_NAME_Debug=projectcanyoubreakthecode.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/projectcanyoubreakthecode.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=project_gameof21
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/project_gameof21
+CND_ARTIFACT_NAME_Release=project_canyoubreakthecode
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/project_canyoubreakthecode
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=projectgameof21.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/projectgameof21.tar
+CND_PACKAGE_NAME_Release=projectcanyoubreakthecode.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/projectcanyoubreakthecode.tar
 #
 # include compiler specific variables
 #

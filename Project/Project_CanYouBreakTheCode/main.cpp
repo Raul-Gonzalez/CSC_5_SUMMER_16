@@ -20,6 +20,7 @@ using namespace std; //Namespace of the System Libraries
 //Global Constants
 
 //Function Prototypes
+float winRatio(float,float);
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
@@ -29,7 +30,7 @@ int main(int argc, char** argv) {
     //Declare Variables
     int num1=0,num2=0,num3=0,//Random numbers used to call each word
         nLoss=0,nWins=0;//Counters used for number of wins|losses
-    int count=0;
+    int count1=0,count2=0,count3=0;
     const int SIZE=20;
     string word,guess1,guess2,guess3,//Strings Declared for each guess
             fName;//String used for the file
@@ -49,23 +50,27 @@ int main(int argc, char** argv) {
     cout<<"You must guess a series of the most commonly used words in";
     cout<<" the English language."<<endl;
     
-    //Input the Data
+    //Prompt User to Play
     cout<<"Are you the One?"<<endl;
     cout<<"Enter Y to play"<<endl;
     cin>>play;
+    cout<<endl;
+    
+    if(play=='Y'){
+    //Prompt user for Name
     cout<<"What is your first Name"<<endl;
     cin>>fName;
     cout<<"What is your last Name"<<endl;
     cin>>lName;
     cout<<endl;
-
+    
     //Input the Data for the first test
-    while (count<1){
+    while (count1<1){
         num1 = rand()%10+1;
-        count++;
+        count1++;
         cout<<num1<<endl;
     }
-    for (count =0;count<num1; ++count)
+    for (count1 =0;count1<num1; ++count1)
     {
         getline(inFile1, word);//Get the word
     }
@@ -73,6 +78,7 @@ int main(int argc, char** argv) {
     while(guess1!=word){
         cout<<"Guess a three character word"<<endl;
         cin>>setw(3)>>guess1;
+        cout<<endl;
         if(guess1!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -82,16 +88,14 @@ int main(int argc, char** argv) {
         if(guess1==word)nWins++;
     }
     cout<<"You have passed the first test."<<endl;
-    cout<<"Number of losses "<<nLoss<<endl;
-    cout<<"Number of wins "<<nWins<<endl;
         
     //Input Data for the Second Test
-    while (count<1){
+    while (count2<1){
         num2 = rand()%10+1;
-        count++;
+        count2++;
         cout<<num2<<endl;
     }
-    for (count=0;count<num2;++count)
+    for (count2=0;count2<num2;++count2)
     {
         getline(inFile2, word);//Get the word
     }
@@ -99,6 +103,7 @@ int main(int argc, char** argv) {
         while(guess2!=word){
         cout<<"Guess a four character word"<<endl;
         cin>>setw(4)>>guess2;
+        cout<<endl;
         if(guess2!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -109,16 +114,14 @@ int main(int argc, char** argv) {
         if(guess2==word)nWins++;
     }
     cout<<"You have passed the second test."<<endl;
-    cout<<"Number of losses "<<nLoss<<endl;
-    cout<<"Number of wins "<<nWins<<endl;
     
     //Input the data for the third test
-    while (count<1){
+    while (count3<1){
         num3 = rand()%10+1;
-        count++;
+        count3++;
         cout<<num3<<endl;
     }
-    for (count =0;count<num3; ++count)
+    for (count3 =0;count3<num3; ++count3)
     {
         getline(inFile3, word);//Get the word
     }
@@ -126,6 +129,7 @@ int main(int argc, char** argv) {
     while(guess3!=word){
         cout<<"Guess a five character word"<<endl;
         cin>>setw(5)>>guess3;
+        cout<<endl;
         if(guess3!=word){
         cout<<"You have not entered the correct word"<<endl;
         cout<<endl;
@@ -135,24 +139,41 @@ int main(int argc, char** argv) {
         if(guess3==word)nWins++;
     }
     cout<<"You have passed the third test."<<endl;
+    cout<<endl;
     
     //Output the processed Data to the screen
     cout<<"The Nebuchandnezzar has been saved"<<endl;
+    cout<<endl;
     cout<<"Total wins are "<<nWins<<endl;
+    cout<<endl;
     cout<<"Total losses are "<<nLoss<<endl;
+    cout<<endl;
+    cout<<fixed<<setprecision(2)<<showpoint<<" = "<<winRatio(nWins,nLoss)<<"%"<<endl;
     if(nWins>=nLoss){
-        cout<<"You are doign better than most"<<endl;
+        cout<<"You are doing better than most"<<endl;
     }
  
     //Output the processed Data to a file
-    out<<endl;<<fName<<" "<<lName<<" Game Stats "<<endl;
+    out<<endl<<fName<<" "<<lName<<" Game Stats "<<endl;
     out<<" Number of Wins   = "<<nWins<<endl;
     out<<" Number of Losses = "<<nLoss<<endl;
+    cout<<fixed<<setprecision(2)<<showpoint<<" = "<<winRatio(nWins,nLoss)<<"%"<<endl;
     if(nWins>=nLoss){
         out<<"You are doing better than most"<<endl;
     }
+    }else{
+        cout<<"You have quite the game with "<<play<<endl;
+    }
     
     //Exit Stage Right!
+    inFile1.close();
+    inFile2.close();
+    inFile3.close();
     out.close();
     return 0;
+}
+
+float winRatio(float nWins,float nLoss){
+    cout<<"The percentage of Wins "<<endl;
+    return (nWins/(nWins+nLoss))*100;
 }
