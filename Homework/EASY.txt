@@ -1,0 +1,104 @@
+/* 
+ * File:   main.cpp
+ * Author: Raul Gonzalez
+ * Created on July 25th, 2016, 7:50 PM
+ * Purpose:  Guess the Number
+ */
+
+//System Libraries
+#include <iostream>  //
+#include <cstdlib>   //Random
+#include <ctime>     //Time
+#include <cmath>     //Math Library
+using namespace std; //Namespace of the System Libraries
+
+//User Libraries
+
+//Global Constants
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    srand(static_cast<unsigned int>(time(0)));
+    
+    while(true){//Loop for the game
+    
+    //Declare Variables
+    int num=0,maxTry=0,random=0,guess=0,powr=0,range=0,count=0;
+    char answer;
+    
+    //Input Data
+    cout<<"Welcome to the guess the number game"<<endl;
+    cout<<"Enter an integer X to randomize a number from 0 to 10^X"<<endl;
+    cout<<"You will be given a maximum of log2(10^X)+1 guesses."<<endl;
+    cout<<"Please type in your number X"<<endl;
+    cin>>powr;
+    
+    //Process the Data
+    
+
+            //Get the random number
+            range=pow(10,powr);
+            random=rand()%range+0;
+            maxTry=log2(range);
+        
+            while(true){
+                    //Get number from user
+                    cout<<"Please type in your guess"<<endl;
+                    cin>>guess;
+                    cin.ignore();
+
+                    //Check if the number of tries are taken up
+                    if(count>=maxTry){
+                        break;
+                    }
+
+                    //Check the number
+                    if (guess>random){
+                        cout<<"Too high! Try again"<<endl;
+                    }else if (guess<random){
+                        cout<<"Too low. Try again"<<endl;
+                    }else{
+                        break;
+                    }
+                    //Increment the number of tries
+                    count++;
+            }
+
+            //Check for number of tries
+            if(count>=maxTry){
+                    cout<<"Too many tries"<<endl;
+            }else{
+                    //Or, the user won
+                    cout<<"Congratulations, you guessed the number!"<<endl;
+            }
+
+            //Ask user if they would like to play again
+            while(true){
+                    cout<<"Would you like to play again (Y or N)?"<<endl;
+                    cin>>answer;
+                    cin.ignore();
+
+                    //Check the response
+                    if(answer=='N'||answer=='Y'){
+                        break;
+                    }else{
+                        cout<<"Please enter N or Y"<<endl;
+                    }
+            }
+
+            //Check the users response
+            if(answer=='N'){
+                cout<<"Thanks for playing!";
+                break;
+            }else{
+                cout<<"\n\n\n";
+            }
+    }
+   cout<<"\n\nEnter anything to exit...";
+   cin.ignore();
+    //Exit Stage Right!
+    return 0;
+}

@@ -1,0 +1,168 @@
+Grade -> Branching/Ternary
+
+Input the score [0,100] output will be the grade
+95
+95 equates to a A grade!
+
+RUN SUCCESSFUL (total time: 4s)
+
+
+Savings -> Looping
+
+Input the present value in $'s, interest rate in %, number of years in (yrs)
+5700 4.95 3
+Table produced with 4.95% interest
+Year  Date  Savings $
+   0   2016     5700.00
+   1   2017     5982.15
+   2   2018     6278.26
+   3   2019     6589.03
+
+RUN SUCCESSFUL (total time: 25s)
+
+
+Hand Trace -> Fibonacci Hand Trace
+
+Input the index of the Fibonacci Sequence to obtain it's value
+5
+F(5)=5
+F(5)=5
+Line  n  i  fi  fim1  fim2
+  42  5            1     1
+  51  5  3         1     1
+  53  5  3  2      1     1
+  55  5  3  2      1     1
+  57  5  3  2      2     1
+  51  5  4         2     1
+  53  5  4  3      2     1
+  55  5  4  3      2     2
+  57  5  4  3      3     2
+  51  5  5         3     2
+  53  5  5  5      3     2
+  55  5  5  5      3     3
+  57  5  5  5      5     3
+F(5)=5
+
+RUN SUCCESSFUL (total time: 1s)
+
+
+Project Versions -> Craps
+
+The Game of Craps
+How many games to Play has to be positive
+4
+What is your first Name
+raul
+What is your last Name
+gonzalez
+
+raul gonzalez Game Stats
+Number of Games = 4
+Number of Wins  = 1
+Number of Losses= 3
+
+RUN SUCCESSFUL (total time: 14s)
+
+
+File I/0 and Arrays -> Grade/RCS
+
+A 
+B 
+C 
+A 
+A 
+B 
+A 
+D 
+A 
+B 
+A 
+B 
+B 
+D 
+A 
+A 
+B 
+A 
+A 
+C 
+
+
+D 
+D 
+A 
+B 
+C 
+A 
+B 
+A 
+A 
+D 
+A 
+A 
+A 
+C 
+D 
+D 
+D 
+C 
+A 
+A 
+
+
+RUN SUCCESSFUL (total time: 133ms)
+
+
+
+Search and Sort
+
+ 1009 1018 1026 1030 1043 1050 1067 1080 1081 1095
+ 1103 1114 1125 1135 1145 1159 1169 1170 1180 1193
+ 1200 1218 1225 1233 1249 1260 1269 1280 1286 1290
+ 1305 1311 1329 1333 1347 1353 1364 1372 1384 1393
+ 1409 1417 1430 1432 1446 1457 1470 1477 1482 1495
+ 1506 1513 1523 1532 1548 1559 1563 1574 1589 1597
+ 1608 1620 1625 1640 1646 1651 1666 1673 1686 1700
+ 1707 1712 1723 1740 1744 1757 1768 1773 1787 1792
+ 1808 1820 1825 1830 1841 1854 1869 1871 1883 1896
+ 1910 1914 1930 1936 1949 1960 1970 1970 1984 1994
+
+What value would you like to find?
+1994
+Linear Value found at index = 99
+Binary Value found at index = 99
+
+RUN SUCCESSFUL (total time: 7s)
+
+
+
+   24   48   71   42   86   55   82   97   59   41
+   85   44   53   27   30   47   66   74   41   44
+   67   25   96   10   25   64   50   66   93   19
+   38   81   58   12   91   19   69   72   44   73
+   21   10   16   64   90   72   60   18   93   19
+   25   75   32   81   86   23   51   16   77   36
+   25   86   16   70   24   81   68   43   16   73
+   18   53   46   49   43   16   66   30   51   75
+   80   83   61   21   85   84   14   14   41   46
+   34   70   33   78   32   66   14   71   47   56
+
+
+   10   10   12   14   14   14   16   16   16   16
+   16   18   18   19   19   19   21   21   23   24
+   24   25   25   25   25   27   30   30   32   32
+   33   34   36   38   41   41   41   42   43   43
+   44   44   44   46   46   47   47   48   49   50
+   51   51   53   53   55   56   58   59   60   61
+   64   64   66   66   66   66   67   68   69   70
+   70   71   71   72   72   73   73   74   75   75
+   77   78   80   81   81   81   82   83   84   85
+   85   86   86   86   90   91   93   93   96   97
+
+
+RUN SUCCESSFUL (total time: 74ms)
+
+
+
+For each examine the code.  Run and copy/paste results into text editor.  Save/zip/attach
+

@@ -18,9 +18,10 @@ using namespace std; //Namespace of the System Libraries
 //User Libraries
 
 //Global Constants
+const int SIZE=12;
 
 //Function Prototypes
-float winRatio(float,float);
+float winRatio(float, float);
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
@@ -31,7 +32,7 @@ int main(int argc, char** argv) {
     int num1=0,num2=0,num3=0,//Random numbers used to call each word
         nLoss=0,nWins=0;//Counters used for number of wins|losses
     int count1=0,count2=0,count3=0;
-    const int SIZE=20;
+    const int ROWS=10;
     string word,guess1,guess2,guess3,//Strings Declared for each guess
             fName;//String used for the file
     ifstream inFile1,inFile2,inFile3;//Files where words will be obtained from
@@ -40,7 +41,7 @@ int main(int argc, char** argv) {
     ofstream out;//Used to send Data to a file
     
     //Open files and Input Data
-    inFile1.open("word1.txt");
+    inFile1.open("input.dat");
     inFile2.open("word2.txt");
     inFile3.open("word3.txt");
     out.open("stats.dat");
@@ -62,21 +63,21 @@ int main(int argc, char** argv) {
     cin>>fName;
     cout<<"What is your last Name"<<endl;
     cin>>lName;
-    cout<<endl;
     
     //Input the Data for the first test
     while (count1<1){
         num1 = rand()%10+1;
         count1++;
-        cout<<num1<<endl;
     }
     for (count1 =0;count1<num1; ++count1)
     {
         getline(inFile1, word);//Get the word
     }
+    cout<<"Guess a three character word from the list"<<endl;
+    
+    
     //Loop used for the first guess
     while(guess1!=word){
-        cout<<"Guess a three character word"<<endl;
         cin>>setw(3)>>guess1;
         cout<<endl;
         if(guess1!=word){
@@ -177,3 +178,5 @@ float winRatio(float nWins,float nLoss){
     cout<<"The percentage of Wins "<<endl;
     return (nWins/(nWins+nLoss))*100;
 }
+
+void word1()
